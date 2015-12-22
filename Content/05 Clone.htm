@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="14" MadCap:lastHeight="509" MadCap:lastWidth="1224" MadCap:conditionTagExpression="exclude[Default.1 or Default.10 or Default.11 or Default.12 or Default.13 or Default.14 or Default.2 or Default.3 or Default.4 or Default.6 or Default.7 or Default.8 or Default.9 or Default.A or Default.B or Default.C or Default.UPDATE] ">
+    <head>
+        <link href="Resources/TableStyles/Basic.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="Resources/Stylesheets/Styles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Cloning a.k.a. Importing</h1>
+        <MadCap:snippetBlock src="Resources/Snippets/STEPS.flsnp" />
+        <h2>Things to check in Flare:</h2>
+        <ol>
+            <li>Open project folder in Windows Explorer</li>
+            <li>Check for .git folder</li>
+            <li>Check for .gitignore file (Should exclude files/folders: .gitignore, Output, Analyzer, FileSync, and Project/Users)</li>
+        </ol>
+        <p>&#160;</p>
+        <MadCap:dropDown style="background-color: #dcdcdc;">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Things to check in database via Git:</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <p>&#160;</p>
+            <MadCap:dropDownBody>
+                <p>
+                    <code>git status</code>: </p>
+                <p>Result should say: "On branch master. Nothing to commit, working directory clean"</p>
+                <p>HOWEVER Flprj is listed under <b>Staged</b> ("Changes <u>to be</u> commited") and .gitignore is listed under Untracked ("Not Staged") - BUG</p>
+                <p>&#160;</p>
+                <p>
+                    <code>git log</code>: </p>
+                <p>Should be identical to the Remote's log</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+    </body>
+</html>
